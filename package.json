@@ -1,0 +1,17 @@
+{
+  "name": "calculatorwithnode",
+  "version": "1.0.0",
+  "description": "A simple calculator website",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "calculator"
+  ],
+  "author": "Sazith Shyonton",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
