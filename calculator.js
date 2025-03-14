@@ -11,12 +11,23 @@ app.get("/", (req, res)=>{
   
 });
 
+app.get("/bmiCalculator", (req, res)=>{
+res.sendFile(__dirname + "/bmiCalculator.html")
+})
+
 app.post("/", (req,res)=>{
   console.log(req.body);
   var num1 =Number (req.body.num1)
   var num2 =Number (req.body.num2)
   var result = num1 + num2
   res.send("The result of the calculation is " + result)
+});
+
+app.post("/bmiCalculator",(req, res)=>{
+var weight = parseFloat (req.body.weight);
+var height = parseFloat (req.body.height);
+var bmi = weight / (height * height)
+res.send("The calculate BMI is " + bmi)
 })
 
 app.listen(port,()=>{
